@@ -24,7 +24,7 @@ This story ensures that a new user can successfully create an account and receiv
 
 | Given | When | Then |
 | :---- | :---- | :---- |
-| - A user is on the home page of the application. <br> - The user wants to create a new account. | - The user clicks on the "Sign up" link in the navigation bar. The sign-up form appears. <br> - The user enters a unique username and password. <br> - The user submits the sign-up form. | - The system displays an alert confirming that "Sign up successful". <br> - The user remains on the home page. <br> - The "Log in" button is visible in the navigation bar, indicating that the user can now log in with their his credentials. |
+| 🔹 A user is on the home page of the application. <br> 🔹 The user wants to create a new account. | 🔹 The user clicks on the "Sign up" link in the navigation bar. The sign-up form appears. <br> 🔹 The user enters a unique username and password. <br> 🔹 The user submits the sign-up form. | 🔹 The system displays an alert confirming that "Sign up successful". <br> 🔹 The user remains on the home page. <br> 🔹 The "Log in" button is visible in the navigation bar, indicating that the user can now log in with their his credentials. |
 
 ####  **(2) User Story: Contact Form Submission**
 
@@ -32,7 +32,7 @@ This user story ensures that a user can successfully send a message through the 
 
 | Given | When | Then |
 | :---- | :---- | :---- |
-| - A user is on the home page of the application. <br> - The user wants to send a message via the contact form. The user clicks on the “Contact” link in the navigation bar. | - The user enters a valid email address. <br> - The user enters his name. <br> - The user types a message in the text area. <br> - The user submits the contact form.  | - The system displays an alert message confirming "Thanks for the message". <br> - The user remains on the home page.  |
+| 🔹 A user is on the home page of the application. <br> 🔹 The user wants to send a message via the contact form. The user clicks on the “Contact” link in the navigation bar. | 🔹 The user enters a valid email address. <br> 🔹 The user enters his name. <br> 🔹 The user types a message in the text area. <br> 🔹 The user submits the contact form.  | 🔹 The system displays an alert message confirming "Thanks for the message". <br> 🔹 The user remains on the home page.  |
 
 ####  **(3) User Story: Adding Multiple Products to the Shopping Cart**
 
@@ -40,18 +40,18 @@ This user story outlines the key steps involved in adding products to the cart, 
 
 | Given | When | Then |
 | :---- | :---- | :---- |
-| - A user is on the home page of the application. <br> - The category menu is visible, allowing the user to browse product categories. | - The user selects the Phones category and adds the first available phone to the cart. <br> - The user selects the Laptops category and adds the last available laptop to the cart. <br> - The user selects the Monitors category and adds a specific product, "Apple monitor 24," to the cart. <br> - The user navigates to the Cart page and verifies that all three selected products are present. <br> - The user proceeds to Place an Order, fills in the required details (Name, Country, City, Credit Card, Month, Year), and clicks on Purchase.  | - A confirmation popup appears with the message "Thank you for your purchase\!" <br> - The user clicks OK on the confirmation popup. <br> - The user is redirected back to the homepage, completing the purchase process.  |
+| 🔹 A user is on the home page of the application. <br> 🔹 The category menu is visible, allowing the user to browse product categories. | 🔹 The user selects the Phones category and adds the first available phone to the cart. <br> 🔹 The user selects the Laptops category and adds the last available laptop to the cart. <br> 🔹 The user selects the Monitors category and adds a specific product, "Apple monitor 24," to the cart. <br> 🔹 The user navigates to the Cart page and verifies that all three selected products are present. <br> 🔹 The user proceeds to Place an Order, fills in the required details (Name, Country, City, Credit Card, Month, Year), and clicks on Purchase.  | 🔹 A confirmation popup appears with the message "Thank you for your purchase\!" <br> 🔹 The user clicks OK on the confirmation popup. <br> 🔹 The user is redirected back to the homepage, completing the purchase process.  |
 
 ### Test Cases added
 
 | User story | Test case | Description |
 | :---- | :---- | :---- |
-| Sign Up for a New Account | signup.cy.ts | Inheriting parent code’s structure, OOP methods are used |
-|  | \_signup.cy.ts | Not inheriting the parent code’s structure |
-| Contact Form Submission | contact.cy.ts | Inheriting parent code’s structure, OOP methods are used |
-|  | \_contact.cy.ts | Not inheriting the parent code’s structure |
-| Adding Multiple Products to the Shopping Cart | shoppingCart.cy.ts | Inheriting parent code’s structure, OOP methods are used |
-|  | \_shoppingCart.cy.ts | Not inheriting the parent code’s structure |
+| Sign Up for a New Account | signup.cy.ts | 🔹 Inheriting parent code’s structure, OOP methods are used |
+|  | \_signup.cy.ts | 🔸 Not inheriting the parent code’s structure |
+| Contact Form Submission | contact.cy.ts | 🔹 Inheriting parent code’s structure, OOP methods are used |
+|  | \_contact.cy.ts | 🔸 Not inheriting the parent code’s structure |
+| Adding Multiple Products to the Shopping Cart | shoppingCart.cy.ts | 🔹 Inheriting parent code’s structure, OOP methods are used |
+|  | \_shoppingCart.cy.ts | 🔸 Not inheriting the parent code’s structure |
 
 ## 🚀 Getting Started
 
@@ -211,40 +211,40 @@ npx cypress open
 
 | Test | Interaction with different web elements |
 | :---- | :---- |
-| signup | Fill in username and password in the sign up form <br> ``cy.get(`#sign-username`).type('testuser' + Date.now())`` <br> ``cy.get(`#sign-password`).type('testpassword')`` <br> <br>Click the ‘Sign up’ button <br> ``cy.get('button').contains('Sign up').click()`` |
-| contact | Fill in recipient email, recipient name and message text in the contact form <br> ``cy.get(`#recipient-email`).type('abc@example.com’)`` <br> ``cy.get(`#recipient-name`).type('Abc co.')`` <br> ``cy.get(`#message-text`).type('This is a test contact message')`` <br><br> Click the ‘Send message’ button <br> ``cy.get('button').contains('Send message').click()`` |
-| shoppingCart | Select a specific category from the product catalog <br> ``cy.get('[id="itemc"]').contains('Monitors').click()`` <br><br> Select a specific product from the catalog  <br> ``cy.get('.card-title').find('a').contains(productTitle).should('be.visible').click({force:true})`` <br><br> Click the ‘Add to cart’ button on the product page <br> ``cy.contains('Add to cart').click()`` |
+| signup | ✨ Fill in username and password in the sign up form <br> ``cy.get(`#sign-username`).type('testuser' + Date.now())`` <br> ``cy.get(`#sign-password`).type('testpassword')`` <br> <br>✨ Click the ‘Sign up’ button <br> ``cy.get('button').contains('Sign up').click()`` |
+| contact | ✨ Fill in recipient email, recipient name and message text in the contact form <br> ``cy.get(`#recipient-email`).type('abc@example.com’)`` <br> ``cy.get(`#recipient-name`).type('Abc co.')`` <br> ``cy.get(`#message-text`).type('This is a test contact message')`` <br><br> ✨ Click the ‘Send message’ button <br> ``cy.get('button').contains('Send message').click()`` |
+| shoppingCart | ✨ Select a specific category from the product catalog <br> ``cy.get('[id="itemc"]').contains('Monitors').click()`` <br><br> ✨ Select a specific product from the catalog  <br> ``cy.get('.card-title').find('a').contains(productTitle).should('be.visible').click({force:true})`` <br><br> ✨ Click the ‘Add to cart’ button on the product page <br> ``cy.contains('Add to cart').click()`` |
 
 #### (2) Correct use of selectors/locators following best practices 
 
 | Class from parent code | Changes made to use selectors following best practices |
 | :---- | :---- |
-| Carousel.ts | The use of `data-slide` attribute is isolated from CSS style or JS behavioral changes. <br> Select the next button in the carousel on the home page <br> ``cy.get('[data-slide="next"]')`` <br><br> Select the previous button in the carousel on the home page <br> ``cy.get('[data-slide="prev"]')`` |
-| CartPage.ts | The use of `data-target` attribute is not coupled to the behavior or styling of an element. <br> Select the ‘Place Order’ button on the cart page <br> ``cy.get('[data-target="#orderModal"]')`` |
+| Carousel.ts | ⚡ The use of `data-slide` attribute is isolated from CSS style or JS behavioral changes. <br> 📌 Select the next button in the carousel on the home page <br> ``cy.get('[data-slide="next"]')`` <br><br> 📌 Select the previous button in the carousel on the home page <br> ``cy.get('[data-slide="prev"]')`` |
+| CartPage.ts | ⚡ The use of `data-target` attribute is not coupled to the behavior or styling of an element. <br> 📌 Select the ‘Place Order’ button on the cart page <br> ``cy.get('[data-target="#orderModal"]')`` |
 
 #### (3) Interactions with elements with a parent-child structure 
 
 | Test | Interaction with parent-child structure |
 | :---- | :---- |
-| signup | Select the ‘Sign up’ link from the navigation menu <br> ``cy.get('.nav-link').contains(‘Sign up’)`` |
-| contact | Select the ‘Contact’ link from the navigation menu <br> ``cy.get('.nav-link').contains(‘Contact’)`` |
-| shoppingCart | Select a specific category from the product catalog <br> ``cy.get('[id="itemc"]').contains('Phones')`` <br> ``cy.get('[id="itemc"]').contains('Laptops')`` <br> ``cy.get('[id="itemc"]').contains('Monitors')`` |
+| signup | ✨ Select the ‘Sign up’ link from the navigation menu <br> ``cy.get('.nav-link').contains(‘Sign up’)`` |
+| contact | ✨ Select the ‘Contact’ link from the navigation menu <br> ``cy.get('.nav-link').contains(‘Contact’)`` |
+| shoppingCart | ✨ Select a specific category from the product catalog <br> ``cy.get('[id="itemc"]').contains('Phones')`` <br> ``cy.get('[id="itemc"]').contains('Laptops')`` <br> ``cy.get('[id="itemc"]').contains('Monitors')`` |
 
 #### (4) Interactions with sibling elements 
 
 | Test | Interaction with sibling elements in the product catalog |
 | :---- | :---- |
-| shoppingCart | Select the first product in the catalog <br> ``cy.get('.card-title').find('a').first()`` |
-| shoppingCart | Select the last product in the catalog <br> ``cy.get('.card-title').find('a').last()`` |
-| shoppingCart | Select a specific product in the catalog <br> ``cy.get('.card-title').find('a').contains(productTitle)`` |
+| shoppingCart | ✨ Select the first product in the catalog <br> ``cy.get('.card-title').find('a').first()`` |
+| shoppingCart | ✨ Select the last product in the catalog <br> ``cy.get('.card-title').find('a').last()`` |
+| shoppingCart | ✨ Select a specific product in the catalog <br> ``cy.get('.card-title').find('a').contains(productTitle)`` |
 
 #### (5) Each test must have at least an assertion, at least one using should and one using expect
 
 | Test | should() \- Implicitly retries until the assertion passes or times out | expect() \- Does NOT retry automatically |
 | :---- | :---- | :---- |
-| signup | Check visibility of an element <br> ``.should('be.visible')`` <br> Check an element has a specific text <br> ``.should('have.text', 'Log in')`` | Check the success alert message <br> ``cy.on('window:alert', (message) => { expect(message).to.contains(‘Sign up successful’)})`` |
-| contact | Check visibility of an element <br> ``.should('be.visible')`` <br> Check an element contains a specific URL <br> ``.should('include', `${Cypress.config('baseUrl')}`)`` | Check the success alert message <br> ``cy.on('window:alert', (message) => { expect(message).to.contains(‘Thanks for the message’)})`` |
-| shoppingCart | Check visibility of an element <br> ``.should('be.visible')`` <br> Check the number of elements in the cart <br> ``.should('have.length', 3)`` | Check the success alert message <br> ``cy.on('window:alert', (message) => { expect(message).to.contains(‘Product added’)})`` |
+| signup | ✨ Check visibility of an element <br> ``.should('be.visible')`` <br> ✨ Check an element has a specific text <br> ``.should('have.text', 'Log in')`` | ✨ Check the success alert message <br> ``cy.on('window:alert', (message) => { expect(message).to.contains(‘Sign up successful’)})`` |
+| contact | ✨ Check visibility of an element <br> ``.should('be.visible')`` <br> ✨ Check an element contains a specific URL <br> ``.should('include', `${Cypress.config('baseUrl')}`)`` | ✨ Check the success alert message <br> ``cy.on('window:alert', (message) => { expect(message).to.contains(‘Thanks for the message’)})`` |
+| shoppingCart | ✨ Check visibility of an element <br> ``.should('be.visible')`` <br> ✨ Check the number of elements in the cart <br> ``.should('have.length', 3)`` | ✨ Check the success alert message <br> ``cy.on('window:alert', (message) => { expect(message).to.contains(‘Product added’)})`` |
 
 #### (6)Explain how you would debug/troubleshoot an error in your Cypress code (eg. element not found, undefined, …)
 
