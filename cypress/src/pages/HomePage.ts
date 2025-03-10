@@ -6,6 +6,7 @@ import Carousel from '../components/slider/Carousel';
 import ContactModal from '../modals/ContactModal';
 import AboutUsModal from '../modals/AboutUsModal';
 import SignUpModal from '../modals/SignUpModal';
+import OrderModal from '../modals/OrderModal';  // added by Belle
 
 export default class HomePage extends BasePage {
 
@@ -15,7 +16,8 @@ export default class HomePage extends BasePage {
   public carousel: Carousel = new Carousel();
   public contactModal: ContactModal = new ContactModal();
   public aboutUsModal: AboutUsModal = new AboutUsModal();
-  public singUpModal: SignUpModal = new SignUpModal();
+  public signUpModal: SignUpModal = new SignUpModal();
+  public orderModal: OrderModal = new OrderModal();   // added by Belle
 
   constructor() {
     super('index.html');

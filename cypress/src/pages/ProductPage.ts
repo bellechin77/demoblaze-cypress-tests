@@ -13,7 +13,7 @@ export default class ProductPage extends BasePage {
     }
 
     private get addToCartButton(): Cypress.Chainable {
-        return cy.get('.col-sm-12 > .btn');
+         return cy.get('.col-sm-12 > .btn');
     }
 
     public checkProductName(titleProduct: string): this {
@@ -27,9 +27,14 @@ export default class ProductPage extends BasePage {
     }
 
     public checkAlertWindow(): this {
-        cy.on('window:alert', (message) => {
-            expect(message).to.contains('Product added');
-        });
+        // updated by Belle - To use custom command .checkAlert()
+        // cy.on('window:alert', (message) => {
+        //     expect(message).to.contains('Product added');
+        // });
+        cy.checkAlert('Product added');
+        
+        // added by Belle - To allow time for cart update before moving forward
+        cy.wait(1000); 
         return this;
     }
 }

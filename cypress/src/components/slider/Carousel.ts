@@ -17,13 +17,16 @@ export default class Carousel {
         return this;
     }
 
+    // updataed by Belle - To use selector with 'data-slide' attribute
     public clickCarouselNextButton(): this {
-        this.carouselNextButton.click();
+        // this.carouselNextButton.click();
+        cy.get('[data-slide="next"]').click();
         return this;
     }
 
     public clickCarouselPreviousButton(): this {
-        this.carouselPreviousButton.click();
+        // this.carouselPreviousButton.click();
+        cy.get('[data-slide="prev"]').click();
         return this;
     }
 }
