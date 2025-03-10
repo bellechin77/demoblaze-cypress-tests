@@ -44,7 +44,7 @@ describe('Check modals window on the page', () => {
         homePage
             .visit()
             .header.clickOnSignUpButton();
-        homePage.singUpModal
+        homePage.signUpModal
             .checkTextInModalHeader('Sign up')
             .checkTextFormAndInputField('Username:')
             .checkTextFormAndInputField('Password:')
